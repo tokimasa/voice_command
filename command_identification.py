@@ -85,7 +85,7 @@ def recognize_speech_from_mic():
     try:
         sample = wav2mfcc('./audio.wav')
         sample_reshaped = sample.reshape(1, feature_dim_1, feature_dim_2, channel)
-        response["transcription"] = get_labels(path='D:/Python/DeadSimpleSpeechRecognizer-master/DeadSimpleSpeechRecognizer-master/data')[0][
+        response["transcription"] = get_labels(path='C:/Users/TOKIMASA/Documents/GitHub/voice_command/voice_command/data')[0][
                                     np.argmax(model.predict(sample_reshaped))]
     except sr.RequestError:
         # API was unreachable or unresponsive
